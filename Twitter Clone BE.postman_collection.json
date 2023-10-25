@@ -1,0 +1,300 @@
+{
+	"info": {
+		"_postman_id": "89c06467-193c-4e21-87e3-036ad04ee361",
+		"name": "Twitter Clone BE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"nimnahahah@live.com\",\r\n    \"password\": \"a\",\r\n    \"firstName\":\"Nimna\",\r\n    \"lastName\":\"Induwara\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userId\" : \"ghg@live.com\",\r\n    \"password\": \"a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User Informations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8070/api/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update User Information",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\" : \"first\",\r\n    \"lastName\": \"last\",\r\n    \"profilePicture\" : \"pp\",\r\n    \"bio\": \"bio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/user/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"user",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tweetDescription\" : \"tesxvxvxvt\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/tweet",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"tweet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8070/api/tweet/2/like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"tweet",
+						"2",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tweet Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comment\":\"good\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8070/api/tweet/2/comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"tweet",
+						"2",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Share Tweet",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8070/api/tweet/2/share",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"tweet",
+						"2",
+						"share"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJnaGdAbGl2ZS5jb20iLCJleHAiOjE2OTc5NjUwNjEsImlhdCI6MTY5NzYwNTA2MH0.Mhx3VP8UEsQ6tOGmwtWbWsqUzKuCdashQnAa52GRczY",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8070/api/feed?number=0&size=10&sort=createdDateTime,DESC",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8070",
+					"path": [
+						"api",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "createdDateTime,DESC"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
